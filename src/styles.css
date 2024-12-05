@@ -1,0 +1,215 @@
+/* Global Styles */
+body {
+  margin: 0;
+  font-family: "Arial", sans-serif;
+  background-color: #f8f9fa;
+  color: #333;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Header */
+header {
+  background-color: #007bff; /* Màu nền header */
+  color: rgb(158, 45, 45); /* Màu chữ */
+  padding: 0px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Thêm bóng đổ nhẹ để header nổi bật */
+  transition: all 0.3s ease; /* Thêm hiệu ứng chuyển động cho header */
+}
+
+header:hover {
+  background-color: #0056b3; /* Màu nền header khi hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Bóng đổ đậm khi hover */
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .logo {
+  font-size: 28px; /* Tăng kích thước chữ logo */
+  font-weight: bold;
+  letter-spacing: 2px; /* Thêm khoảng cách giữa các chữ trong logo */
+  text-transform: uppercase; /* Viết hoa tất cả chữ trong logo */
+  transition: all 0.3s ease; /* Thêm hiệu ứng chuyển động khi hover vào logo */
+}
+
+header .logo:hover {
+  color: #ffcc00; /* Màu logo khi hover */
+}
+
+header nav a {
+  color: white;
+  margin-right: 15px;
+  text-decoration: navajowhite;
+  font-size: 15px; /* Tăng kích thước chữ cho các liên kết */
+  font-weight: bold;
+  transition: all 0.3s ease; /* Thêm hiệu ứng chuyển động cho các liên kết */
+}
+
+header nav a:hover {
+  text-decoration: underline;
+  color: #ffcc00; /* Màu chữ khi hover */
+}
+
+header nav a:last-child {
+  margin-right: 0;
+}
+
+/* Footer */
+footer {
+  background-color: #343a40;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+}
+
+footer a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* Banner */
+@keyframes blink {
+  20% {
+    opacity: 1;
+  }
+  23% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.banner {
+  background: url("https://cdn.vectorstock.com/i/500p/56/53/template-technology-vector-24555653.jpg")
+    no-repeat center center/cover;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgb(18, 241, 47); /* Đổi màu chữ thành trắng */
+  text-align: center;
+  font-size: 2rem; /* Tăng kích thước chữ */
+  font-weight: bold; /* Làm chữ đậm */
+  text-shadow: 2px 2px 5px rgba(158, 27, 27, 0.7); /* Thêm hiệu ứng bóng đổ */
+  padding: 0 20px; /* Thêm khoảng cách từ lề */
+}
+
+.banner h1 {
+  font-size: 3rem; /* Kích thước chữ tiêu đề lớn hơn */
+  animation: blink 1s infinite; /* Áp dụng hiệu ứng nhấp nháy */
+}
+
+/* Product Card */
+.product-card {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s;
+}
+
+.product-card:hover {
+  transform: translateY(-10px);
+}
+
+.product-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.product-card .info {
+  padding: 16px;
+}
+
+.product-card .info h3 {
+  font-size: 18px;
+  margin: 0 0 10px;
+}
+
+.product-card .info p {
+  color: #007bff;
+  font-weight: bold;
+}
+
+.product-card .info .btn {
+  display: block;
+  text-align: center;
+  margin-top: 10px;
+  padding: 10px 15px;
+  background-color: #007bff;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.product-card .info .btn:hover {
+  background-color: #0056b3;
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.product-detail {
+  display: flex;
+  align-items: flex-start; /* Căn các phần tử theo đỉnh */
+  gap: 20px; /* Khoảng cách giữa ảnh và thông tin */
+}
+
+.product-image {
+  width: 200px;
+  height: auto;
+  border-radius: 10px; /* Bo góc cho ảnh */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Đổ bóng nhẹ */
+}
+
+.product-info {
+  flex: 1; /* Để phần thông tin chiếm phần còn lại */
+  font-family: Arial, sans-serif;
+}
+
+.product-info p {
+  font-size: 16px;
+  line-height: 1.6;
+  margin: 10px 0; /* Khoảng cách giữa các đoạn văn */
+}
+
+.product-info p:first-child {
+  font-weight: bold;
+  font-size: 18px;
+  color: #333;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 15px;
+  background-color: #007bff;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.btn:hover {
+  background-color: #0056b3;
+}
